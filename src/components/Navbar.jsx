@@ -13,8 +13,8 @@ const Navbar = () => {
   const backgroundColor = `bg-white`;
 
   return (
-    <div>
-      <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white ">
+    <div className=" sticky top-0 z-50">
+      <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-darkBackground text-white h-full ">
         <div className=" flex items-center">
           <Link to="/" spy={true} smooth={true} duration={500}>
             <h1 className=" font-semibold text-xl cursor-pointer">TripPixie</h1>
@@ -92,6 +92,7 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={handleChange}
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Home
@@ -101,6 +102,7 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={handleChange}
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Features
@@ -110,6 +112,7 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={handleChange}
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Destination
@@ -119,6 +122,7 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={handleChange}
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           About
@@ -128,16 +132,17 @@ const Navbar = () => {
           spy={true}
           smooth={true}
           duration={500}
+          onClick={handleChange}
           className=" hover:text-brightColor transition-all cursor-pointer"
         >
           Contact
         </Link>
 
         <div className="flex flex-col lg:hidden lg:flex-row items-center gap-4">
-          <h1 className="hover:text-brightColor transition-all cursor-pointer">
+          <h1 className="hover:text-brightColor transition-all cursor-pointer" onClick={handleChange}>
             Register
           </h1>
-          <Button title="Login" backgroundColor={backgroundColor} />
+          <Button title="Login" onClick={handleChange} backgroundColor={backgroundColor} />
         </div>
       </div>
     </div>
